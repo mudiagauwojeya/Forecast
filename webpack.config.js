@@ -5,6 +5,6 @@ module.exports = {
 	entry: "./source/app.js",
 	output: {
 		filename: "bundle.js",
-		path: path.resolve(__dirname, "dist", "scripts"),
+		path: path.resolve(__dirname, "assets", "dist", "scripts"),
 	},
 };
