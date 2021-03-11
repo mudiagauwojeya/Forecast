@@ -2,9 +2,9 @@ const path = require("path");
 
 module.exports = {
 	mode: "development",
-	entry: "./source/index.js",
+	entry: "./source/app.js",
 	output: {
-		filename: "app.js",
-		path: path.resolve(__dirname, "dist"),
+		filename: "bundle.js",
+		path: path.resolve(__dirname, "dist", "scripts"),
 	},
 };
