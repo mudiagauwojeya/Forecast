@@ -1,4 +1,6 @@
 const path = require("path");
+// const HtmlWebPackPlugin = require("html-webpack-plugin");
+// const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
 	mode: "development",
@@ -13,4 +15,10 @@ module.exports = {
 		writeToDisk: true,
 	},
 	devtool: "eval-source-map",
+	// plugins: [
+	// 	new WorkboxPlugin.GenerateSW({
+	// 		clientsClaim: true,
+	// 		skipWaiting: true,
+	// 	}),
+	// ],
 };
