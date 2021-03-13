@@ -12,4 +12,5 @@ module.exports = {
 		contentBase: path.join(__dirname, "dist"),
 		writeToDisk: true,
 	},
+	devtool: "eval-source-map",
 };
