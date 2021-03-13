@@ -4,9 +4,8 @@
   "description": "A Forecast app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "create": "webpack serve --open",
-    "build": "webpack --production"
+    "create": "webpack serve",
+    "build": "webpack"
   },
   "author": "Moody Mudiaga",
   "license": "ISC",
