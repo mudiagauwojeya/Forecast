@@ -6,5 +6,9 @@ module.exports = {
 	output: {
 		filename: "bundle.js",
 		path: path.resolve(__dirname, "assets", "dist", "scripts"),
+		publicPath: "assets",
+	},
+	derServer: {
+		contenttBase: "dist/",
 	},
 };
