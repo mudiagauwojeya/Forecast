@@ -6,7 +6,9 @@ if ("serviceWorker" in navigator) {
 			.register("/service-worker.js", {
 				scope: "/",
 			})
-			.then((registered) => console.log(registered))
+			.then((registered) =>
+				console.log(`service worker registered successfully`, registered)
+			)
 			.catch((err) => {
 				const error = { message: err.message };
 				console.log(err);
@@ -14,4 +16,3 @@ if ("serviceWorker" in navigator) {
 			});
 	});
 }
-console.log("Hello");
