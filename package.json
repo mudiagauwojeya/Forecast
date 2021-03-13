@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "webpack --watch",
-    "build": "webpack"
+    "create": "webpack serve --open",
+    "build": "webpack --production"
   },
   "author": "Moody Mudiaga",
   "license": "ISC",

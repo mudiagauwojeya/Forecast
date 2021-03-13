@@ -8,7 +8,7 @@ module.exports = {
 		path: path.resolve(__dirname, "assets", "dist", "scripts"),
 		publicPath: "assets",
 	},
-	derServer: {
+	devServer: {
 		contenttBase: "dist/",
 	},
 };
