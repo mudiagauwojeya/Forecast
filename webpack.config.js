@@ -5,10 +5,10 @@ module.exports = {
 	entry: "./source/app.js",
 	output: {
 		filename: "bundle.js",
-		path: path.resolve(__dirname, "assets", "dist", "scripts"),
-		publicPath: "assets",
+		path: path.resolve(__dirname, "dist", "assets", "scripts"),
+		publicPath: "dist",
 	},
 	devServer: {
-		contenttBase: "dist/",
+		contentBase: path.join(__dirname, "dist"),
 	},
 };
