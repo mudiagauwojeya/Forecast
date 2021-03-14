@@ -1,7 +1,11 @@
 //Service Worker
 
 const cacheName = "sw_v1";
-const precacheFiles = ["./index.html", "./assets/css/*", "./assets/scripts/*"];
+const precacheFiles = [
+	"index.html",
+	"./assets/css/style.css",
+	"./assets/scripts/bundle.js",
+];
 
 self.addEventListener("install", (event) => {
 	//install service-worker
@@ -9,7 +13,9 @@ self.addEventListener("install", (event) => {
 	event.waitUntil(
 		caches
 			.open(cacheName)
-			.then((cache) => cache.addAll(precacheFiles))
+			.then((cache) => {
+				return cache.addAll(precacheFiles);
+			})
 			.catch((err) => {
 				const error = err.message;
 				throw error;
