@@ -1,6 +1,6 @@
 //Service Worker
 
-const cacheName = "sw_v1";
+const cacheName = "sw_v2";
 const precacheFiles = [
 	"index.html",
 	"./assets/css/style.css",
@@ -9,7 +9,6 @@ const precacheFiles = [
 
 self.addEventListener("install", (event) => {
 	//install service-worker
-	console.log(event, "Service worker is installed");
 	event.waitUntil(
 		caches
 			.open(cacheName)
@@ -26,7 +25,15 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
 	//service worker is activated
-	console.log(event, "service worker is activated");
+	event.waitUntil(
+		caches.keys().then((keys) => {
+			keys.forEach((key) => {
+				if (key !== cacheName) {
+					caches.delete(key);
+				}
+			});
+		})
+	);
 });
 
 self.addEventListener("fetch", (event) => {
