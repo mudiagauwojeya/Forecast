@@ -1,7 +1,8 @@
 //Service Worker
 
-const cacheName = "sw_v2";
+const cacheName = "sw_v5";
 const precacheFiles = [
+	"/",
 	"index.html",
 	"./assets/css/style.css",
 	"./assets/scripts/bundle.js",
@@ -34,9 +35,24 @@ self.addEventListener("activate", (event) => {
 			});
 		})
 	);
+	self.clients.claim();
 });
 
 self.addEventListener("fetch", (event) => {
 	//service worker intercepting fetch request
-	console.log(event);
+	const request = event.request;
+	event.respondWith(
+		caches
+			.open(cacheName)
+			.then((cache) => {
+				cache.match(request).then((response) => response);
+			})
+			.catch(() => {
+				fetch(request).then((response) => {
+					const resClone = response.clone();
+					cache.put(request, resClone);
+					return response;
+				});
+			})
+	);
 });
