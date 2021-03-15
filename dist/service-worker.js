@@ -1,6 +1,6 @@
 //Service Worker
 
-const cacheName = "sw_v1";
+const cacheName = "sw_v1.0";
 const precacheFiles = [
 	"/",
 	"index.html",
@@ -46,6 +46,11 @@ self.addEventListener("fetch", (event) => {
 			return (
 				response ||
 				fetch(request).then((response) => {
+					const url =
+						"http://localhost:8080/sockjs-node/info?t=1615814545218";
+					if (request.url === url) {
+						return;
+					}
 					caches
 						.open(cacheName)
 						.then((cache) => {
