@@ -15,6 +15,12 @@ module.exports = {
 		writeToDisk: true,
 	},
 	devtool: "eval-source-map",
+	rules: [
+		{
+			test: /\.css$/i,
+			use: ["style-loader", "css-loader"],
+		},
+	],
 	// plugins: [
 	// 	new WorkboxPlugin.GenerateSW({
 	// 		clientsClaim: true,
