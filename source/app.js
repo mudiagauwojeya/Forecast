@@ -1,3 +1,5 @@
+import css from "./app.css";
+
 //service worker
 if ("serviceWorker" in navigator) {
 	window.addEventListener("load", () => {
@@ -6,9 +8,9 @@ if ("serviceWorker" in navigator) {
 			.register("/service-worker.js", {
 				scope: "/",
 			})
-			.then((registered) =>
-				console.log(`service worker registered successfully`, registered)
-			)
+			.then(() => {
+				return;
+			})
 			.catch((err) => {
 				const error = { message: err.message };
 				console.log(err);
