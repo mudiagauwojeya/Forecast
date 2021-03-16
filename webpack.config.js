@@ -23,17 +23,19 @@ module.exports = {
 			{
 				test: /\.css$/i,
 				use: [
-					{ loader: "style-loader", options: { injectType: "linkTag" } },
+					// { loader: "style-loader", options: { injectType: "linkTag" } },
+					"style-loader",
 					"css-loader",
+					"sass-loader",
 				],
 			},
 			{
 				test: /\.js$/i,
-				exclude: /node_modules/,
+				exclude: /node_modules$/,
 				use: {
 					loader: "babel-loader",
 					options: {
-						presets: ["@babel/preset-env"],
+						presets: ["@babel/preset-es2015"],
 					},
 				},
 			},
