@@ -14,3 +14,6 @@ html {
 ::selection {
 	background-color: #eb6868;
 }
+
+body {
+	color: #554f4f;
