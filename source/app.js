@@ -20,7 +20,9 @@ if ("serviceWorker" in navigator) {
 }
 
 class App {
-	constructor() {}
+	constructor() {
+		this.weather;
+	}
 
 	init() {}
 }
