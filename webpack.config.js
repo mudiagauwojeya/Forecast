@@ -4,9 +4,12 @@ const path = require("path");
 
 module.exports = {
 	mode: "development",
-	entry: "./source/app.js",
+	entry: {
+		app: "./source/app.js",
+		weather: "./source/weather/weather.js",
+	},
 	output: {
-		filename: "bundle.js",
+		filename: "[name].js",
 		path: path.resolve(__dirname, "dist", "assets", "scripts"),
 		publicPath: "dist",
 	},
@@ -15,12 +18,14 @@ module.exports = {
 		writeToDisk: true,
 	},
 	devtool: "eval-source-map",
-	rules: [
-		{
-			test: /\.css$/i,
-			use: ["style-loader", "css-loader"],
-		},
-	],
+	module: {
+		rules: [
+			{
+				test: /\.css$/i,
+				use: ["style-loader", "css-loader"],
+			},
+		],
+	},
 	// plugins: [
 	// 	new WorkboxPlugin.GenerateSW({
 	// 		clientsClaim: true,
