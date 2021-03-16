@@ -18,3 +18,12 @@ if ("serviceWorker" in navigator) {
 			});
 	});
 }
+
+class App {
+	constructor() {}
+
+	init() {}
+}
+
+const app = new App();
+app.init();
