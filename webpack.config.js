@@ -26,7 +26,7 @@ module.exports = {
 					// { loader: "style-loader", options: { injectType: "linkTag" } },
 					"style-loader",
 					"css-loader",
-					"sass-loader",
+					// "sass-loader",
 				],
 			},
 			{
@@ -35,7 +35,7 @@ module.exports = {
 				use: {
 					loader: "babel-loader",
 					options: {
-						presets: ["@babel/preset-es2015"],
+						presets: ["@babel/preset-env"],
 					},
 				},
 			},
