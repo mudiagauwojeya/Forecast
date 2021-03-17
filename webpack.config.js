@@ -15,9 +15,12 @@ module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname, "dist"),
 		writeToDisk: true,
-		watchContentBase: true,
-		liveReload: true,
+		// watchContentBase: true,
+		// liveReload: true,
 		port: 3000,
+		watchOptions: {
+			poll: 3000,
+		},
 	},
 	devtool: "eval-source-map",
 	plugins: [
