@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "create": "webpack serve",
+    "watch": "sass --watch sass/main.scss dist/assets/css/styles.css",
     "build": "webpack"
   },
   "author": "Moody Mudiaga",
