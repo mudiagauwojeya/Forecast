@@ -16,6 +16,7 @@ module.exports = {
 		contentBase: path.join(__dirname, "dist"),
 		writeToDisk: true,
 		watchContentBase: true,
+		liveReload: true,
 		port: 3000,
 	},
 	devtool: "eval-source-map",
