@@ -1,5 +1,5 @@
 //Service Worker
-const cacheName = "sw_v1.10.5";
+const cacheName = "sw_v1.10.6";
 const precacheFiles = [
 	"/",
 	"index.html",
@@ -39,23 +39,8 @@ self.addEventListener("activate", (event) => {
 	self.clients.claim();
 });
 
-self.addEventListener("fetch", (event) => {
-	//service worker intercepting fetch request
-	const request = event.request;
-	event.respondWith(
-		caches.match(request).then((response) => {
-			return (
-				response ||
-				fetch(request).then((response) => {
-					caches
-						.open(cacheName)
-						.then((cache) => {
-							cache.put(request, response.clone());
-							return response;
-						})
-						.catch((err) => console.log(err.message));
-				})
-			);
-		})
-	);
-});
+// self.addEventListener("fetch", (event) => {
+// 	//service worker intercepting fetch request
+// 	const request = event.request;
+// 	event.respondWith(caches.match(request).then((response) => response));
+// });
