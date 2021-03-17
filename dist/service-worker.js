@@ -1,10 +1,11 @@
 //Service Worker
-const cacheName = "sw_v1.10.6";
+const cacheName = "sw_v1.10.3";
 const precacheFiles = [
 	"/",
 	"index.html",
 	"weather.html",
-	"./assets/css/style.css",
+	"./assets/scripts/app.css",
+	"./assets/scripts/weather.css",
 	"./assets/scripts/app.js",
 	"./assets/scripts/weather.js",
 ];
@@ -14,9 +15,7 @@ self.addEventListener("install", (event) => {
 	event.waitUntil(
 		caches
 			.open(cacheName)
-			.then((cache) => {
-				return cache.addAll(precacheFiles);
-			})
+			.then((cache) => cache.addAll(precacheFiles))
 			.catch((err) => {
 				const error = err.message;
 				throw error;
@@ -36,11 +35,13 @@ self.addEventListener("activate", (event) => {
 			});
 		})
 	);
-	self.clients.claim();
+	clients.claim().then(() => {
+		return;
+	});
 });
 
-// self.addEventListener("fetch", (event) => {
-// 	//service worker intercepting fetch request
-// 	const request = event.request;
-// 	event.respondWith(caches.match(request).then((response) => response));
-// });
+self.addEventListener("fetch", (event) => {
+	//service worker intercepting fetch request
+	const request = event.request;
+	event.respondWith(caches.match(request).then((response) => response));
+});
