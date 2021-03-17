@@ -4,7 +4,7 @@
   "description": "A Forecast app",
   "main": "index.js",
   "scripts": {
-    "create": "webpack serve --watch-content-base",
+    "create": "webpack serve",
     "build": "webpack"
   },
   "author": "Moody Mudiaga",
