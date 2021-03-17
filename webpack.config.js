@@ -1,7 +1,5 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const HtmlWebPackPlugin = require("html-webpack-plugin");
-// const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
 	mode: "development",
@@ -17,6 +15,8 @@ module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname, "dist"),
 		writeToDisk: true,
+		watchContentBase: true,
+		port: 3000,
 	},
 	devtool: "eval-source-map",
 	plugins: [
@@ -31,7 +31,6 @@ module.exports = {
 				test: /\.(c|sc|sa)ss$/i,
 				use: [
 					MiniCssExtractPlugin.loader,
-					// "style-loader",
 					"css-loader",
 					// "postcss-loader",
 					"sass-loader",
@@ -49,10 +48,4 @@ module.exports = {
 			},
 		],
 	},
-	// plugins: [
-	// 	new WorkboxPlugin.GenerateSW({
-	// 		clientsClaim: true,
-	// 		skipWaiting: true,
-	// 	}),
-	// ],
 };
