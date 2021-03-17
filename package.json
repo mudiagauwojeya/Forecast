@@ -4,8 +4,7 @@
   "description": "A Forecast app",
   "main": "index.js",
   "scripts": {
-    "create": "webpack serve",
-    "watch": "sass --watch sass/main.scss dist/assets/css/styles.css",
+    "create": "webpack serve --watch-content-base",
     "build": "webpack"
   },
   "author": "Moody Mudiaga",
