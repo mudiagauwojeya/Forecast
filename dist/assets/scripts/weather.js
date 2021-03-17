@@ -16,17 +16,17 @@
   \***********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather.css */ \"./source/weather/weather.css\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n\n\nvar Weather = function Weather(coordinates) {\n  _classCallCheck(this, Weather);\n\n  this.lng = coordinates.lng;\n  this.lat = coordinates.lat;\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9mb3JlY2FzdC8uL3NvdXJjZS93ZWF0aGVyL3dlYXRoZXIuanM/NWU2NiJdLCJuYW1lcyI6WyJXZWF0aGVyIiwiY29vcmRpbmF0ZXMiLCJsbmciLCJsYXQiXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTs7SUFFTUEsTyxHQUNMLGlCQUFZQyxXQUFaLEVBQXlCO0FBQUE7O0FBQ3hCLE9BQUtDLEdBQUwsR0FBV0QsV0FBVyxDQUFDQyxHQUF2QjtBQUNBLE9BQUtDLEdBQUwsR0FBV0YsV0FBVyxDQUFDRSxHQUF2QjtBQUNBLEMiLCJmaWxlIjoiLi9zb3VyY2Uvd2VhdGhlci93ZWF0aGVyLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNzcyBmcm9tIFwiLi93ZWF0aGVyLmNzc1wiO1xyXG5cclxuY2xhc3MgV2VhdGhlciB7XHJcblx0Y29uc3RydWN0b3IoY29vcmRpbmF0ZXMpIHtcclxuXHRcdHRoaXMubG5nID0gY29vcmRpbmF0ZXMubG5nO1xyXG5cdFx0dGhpcy5sYXQgPSBjb29yZGluYXRlcy5sYXQ7XHJcblx0fVxyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./source/weather/weather.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather.scss */ \"./source/weather/weather.scss\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n\n\nvar Weather = function Weather(coordinates) {\n  _classCallCheck(this, Weather);\n\n  this.lng = coordinates.lng;\n  this.lat = coordinates.lat;\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9mb3JlY2FzdC8uL3NvdXJjZS93ZWF0aGVyL3dlYXRoZXIuanM/NWU2NiJdLCJuYW1lcyI6WyJXZWF0aGVyIiwiY29vcmRpbmF0ZXMiLCJsbmciLCJsYXQiXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTs7SUFFTUEsTyxHQUNMLGlCQUFZQyxXQUFaLEVBQXlCO0FBQUE7O0FBQ3hCLE9BQUtDLEdBQUwsR0FBV0QsV0FBVyxDQUFDQyxHQUF2QjtBQUNBLE9BQUtDLEdBQUwsR0FBV0YsV0FBVyxDQUFDRSxHQUF2QjtBQUNBLEMiLCJmaWxlIjoiLi9zb3VyY2Uvd2VhdGhlci93ZWF0aGVyLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNzcyBmcm9tIFwiLi93ZWF0aGVyLnNjc3NcIjtcclxuXHJcbmNsYXNzIFdlYXRoZXIge1xyXG5cdGNvbnN0cnVjdG9yKGNvb3JkaW5hdGVzKSB7XHJcblx0XHR0aGlzLmxuZyA9IGNvb3JkaW5hdGVzLmxuZztcclxuXHRcdHRoaXMubGF0ID0gY29vcmRpbmF0ZXMubGF0O1xyXG5cdH1cclxufVxyXG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./source/weather/weather.js\n");
 
 /***/ }),
 
-/***/ "./source/weather/weather.css":
-/*!************************************!*\
-  !*** ./source/weather/weather.css ***!
-  \************************************/
+/***/ "./source/weather/weather.scss":
+/*!*************************************!*\
+  !*** ./source/weather/weather.scss ***!
+  \*************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9mb3JlY2FzdC8uL3NvdXJjZS93ZWF0aGVyL3dlYXRoZXIuY3NzP2Y3MTAiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBIiwiZmlsZSI6Ii4vc291cmNlL3dlYXRoZXIvd2VhdGhlci5jc3MuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./source/weather/weather.css\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9mb3JlY2FzdC8uL3NvdXJjZS93ZWF0aGVyL3dlYXRoZXIuc2Nzcz8wNzljIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSIsImZpbGUiOiIuL3NvdXJjZS93ZWF0aGVyL3dlYXRoZXIuc2Nzcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./source/weather/weather.scss\n");
 
 /***/ })
 

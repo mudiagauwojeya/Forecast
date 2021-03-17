@@ -1,4 +1,4 @@
-import css from "./app.css";
+import css from "./app.scss";
 
 //service worker
 if ("serviceWorker" in navigator) {
@@ -14,7 +14,6 @@ if ("serviceWorker" in navigator) {
 			.catch((err) => {
 				const error = { message: err.message };
 				console.log(err);
-				throw error;
 			});
 	});
 }
