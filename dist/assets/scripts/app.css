@@ -1,15 +1,27 @@
 html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 ::selection {
-  background-color: #eb6868;
+	background-color: #eb6868;
 }
 
 body {
-  background-color: #47566b;
-  color: #f8f8ff;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 1.8rem;
+	background-color: #47566b;
+	color: #f8f8ff;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-size: 1.8rem;
+}
+
+.lorem {
+	margin: 5rem 0;
+	opacity: 0;
+	transform: translateX(-50rem);
+	transition: all 1s ease;
+}
+
+.lorem.active {
+	opacity: 1;
+	transform: translateX(0);
 }
