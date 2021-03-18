@@ -6,6 +6,7 @@ module.exports = {
 	entry: {
 		app: "./source/app.js",
 		weather: "./source/components/weather.js",
+		finder: "./source/components/finder.js",
 	},
 	output: {
 		filename: "[name].js",
