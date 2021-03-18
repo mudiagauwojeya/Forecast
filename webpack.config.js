@@ -5,7 +5,7 @@ module.exports = {
 	mode: "development",
 	entry: {
 		app: "./source/app.js",
-		weather: "./source/weather/weather.js",
+		weather: "./source/components/weather.js",
 	},
 	output: {
 		filename: "[name].js",
