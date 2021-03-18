@@ -1,4 +1,4 @@
-import css from "./app.scss";
+import css from "./css/app.scss";
 
 //service worker
 // if ("serviceWorker" in navigator) {

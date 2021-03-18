@@ -1,4 +1,4 @@
-import css from "./weather.scss";
+import css from "../css/weather.scss";
 
 class Weather {
 	constructor(coordinates) {
