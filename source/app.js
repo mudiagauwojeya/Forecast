@@ -28,3 +28,24 @@ class App {
 
 const app = new App();
 app.init();
+
+const options = {
+	root: null,
+	rootMargin: "0px 0px -200px 0px",
+	threshold: 0.05,
+};
+
+let observer = new IntersectionObserver(fadeIn, options);
+document.querySelectorAll(".lorem").forEach((lorem) => {
+	observer.observe(lorem);
+});
+
+function fadeIn(elements) {
+	elements.forEach((element) => {
+		if (element.isIntersecting) {
+			element.target.classList.add("active");
+		} else {
+			element.target.classList.remove("active");
+		}
+	});
+}
