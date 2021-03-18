@@ -17,6 +17,7 @@ module.exports = {
 		contentBase: path.join(__dirname, "dist"),
 		watchContentBase: true,
 		writeToDisk: true,
+		publicPath: "dist",
 	},
 	devtool: "eval-source-map",
 	plugins: [
