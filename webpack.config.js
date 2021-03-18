@@ -40,7 +40,7 @@ module.exports = {
 						loader: "postcss-loader",
 						options: {
 							postcssOptions: {
-								plugins: [["autoprefixer"]],
+								plugins: [["postcss-preset-env"]],
 							},
 						},
 					},
