@@ -1,5 +1,5 @@
 //Service Worker
-const cacheName = "sw_v1.10.3";
+const cacheName = "sw_v1.10.4";
 const precacheFiles = [
 	"/",
 	"index.html",
@@ -35,9 +35,7 @@ self.addEventListener("activate", (event) => {
 			});
 		})
 	);
-	clients.claim().then(() => {
-		return;
-	});
+	clients.claim();
 });
 
 self.addEventListener("fetch", (event) => {
