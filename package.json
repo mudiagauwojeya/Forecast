@@ -4,7 +4,7 @@
   "description": "A Forecast app",
   "main": "index.js",
   "scripts": {
-    "create": "webpack --mode=development --progress",
+    "create": "webpack --mode=development",
     "build": "webpack --mode=production"
   },
   "author": "Moody Mudiaga",
