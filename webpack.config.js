@@ -5,18 +5,16 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
 	entry: {
 		app: "./source/app.js",
-		weather: "./source/components/weather.js",
-		finder: "./source/components/finder.js",
 	},
 	output: {
-		filename: "[name].js",
+		filename: "bundle.js",
 		path: path.resolve(__dirname, "dist", "assets", "scripts"),
 	},
 	watch: true,
 	devtool: "eval-source-map",
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: "[name].css",
+			filename: "styles.css",
 		}),
 		new BrowserSyncPlugin({
 			host: "localhost",
