@@ -1,5 +1,5 @@
 //Service Worker
-const cacheName = "sw_v1.10.4";
+const cacheName = "sw_v1.10.5";
 const precacheFiles = [
 	"/",
 	"index.html",

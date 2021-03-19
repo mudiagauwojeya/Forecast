@@ -31,7 +31,7 @@ module.exports = {
 			host: "localhost",
 			port: 3000,
 			server: { baseDir: ["dist"] },
-			files: ["./dist/*.html"],
+			files: ["./dist/*.html", "./dist/service-worker.js"],
 			// proxy the Webpack Dev Server endpoint
 			// (which should be serving on http://localhost:3100/)
 			// through BrowserSync
