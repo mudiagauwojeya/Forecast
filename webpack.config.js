@@ -16,6 +16,7 @@ module.exports = {
 		contentBase: path.resolve(__dirname, "dist"),
 		watchOptions: {
 			poll: 2000,
+			ignored: /node_modules/,
 		},
 		writeToDisk: true,
 	},
