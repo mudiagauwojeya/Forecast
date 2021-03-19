@@ -13,10 +13,9 @@ module.exports = {
 		path: path.resolve(__dirname, "dist", "assets", "scripts"),
 	},
 	devServer: {
-		contentBase: path.join(__dirname, "dist"),
+		contentBase: path.resolve(__dirname, "dist"),
 		watchOptions: {
-			poll: true,
-			ignored: "/node_modules/",
+			poll: 2000,
 		},
 		writeToDisk: true,
 	},
