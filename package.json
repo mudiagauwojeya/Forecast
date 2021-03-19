@@ -4,8 +4,8 @@
   "description": "A Forecast app",
   "main": "index.js",
   "scripts": {
-    "create": "webpack serve",
-    "build": "webpack"
+    "create": "webpack serve --watch-content-base",
+    "build": "webpack --mode=production"
   },
   "author": "Moody Mudiaga",
   "license": "ISC",
