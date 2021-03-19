@@ -14,7 +14,9 @@ module.exports = {
 		publicPath: "dist",
 	},
 	devServer: {
+		compress: true,
 		contentBase: path.join(__dirname, "dist"),
+		open: true,
 		watchContentBase: true,
 		writeToDisk: true,
 	},
