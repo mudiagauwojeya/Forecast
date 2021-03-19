@@ -13,29 +13,16 @@ module.exports = {
 		path: path.resolve(__dirname, "dist", "assets", "scripts"),
 	},
 	watch: true,
-	// devServer: {
-	// 	contentBase: path.resolve(__dirname, "dist"),
-	// 	watchOptions: {
-	// 		poll: 2000,
-	// 		ignored: /node_modules/,
-	// 	},
-	// 	writeToDisk: true,
-	// },
 	devtool: "eval-source-map",
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: "[name].css",
 		}),
 		new BrowserSyncPlugin({
-			// browse to http://localhost:3000/ during development
 			host: "localhost",
 			port: 3000,
 			server: { baseDir: ["dist"] },
 			files: ["./dist/*.html", "./dist/service-worker.js"],
-			// proxy the Webpack Dev Server endpoint
-			// (which should be serving on http://localhost:3100/)
-			// through BrowserSync
-			// proxy: "http://localhost:8080/",
 		}),
 	],
 	module: {
