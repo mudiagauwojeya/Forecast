@@ -1,8 +1,8 @@
 const path = require("path");
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-	mode: "development",
 	entry: {
 		app: "./source/app.js",
 		weather: "./source/components/weather.js",
@@ -12,18 +12,30 @@ module.exports = {
 		filename: "[name].js",
 		path: path.resolve(__dirname, "dist", "assets", "scripts"),
 	},
-	devServer: {
-		contentBase: path.resolve(__dirname, "dist"),
-		watchOptions: {
-			poll: 2000,
-			ignored: /node_modules/,
-		},
-		writeToDisk: true,
-	},
+	watch: true,
+	// devServer: {
+	// 	contentBase: path.resolve(__dirname, "dist"),
+	// 	watchOptions: {
+	// 		poll: 2000,
+	// 		ignored: /node_modules/,
+	// 	},
+	// 	writeToDisk: true,
+	// },
 	devtool: "eval-source-map",
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: "[name].css",
+		}),
+		new BrowserSyncPlugin({
+			// browse to http://localhost:3000/ during development
+			host: "localhost",
+			port: 3000,
+			server: { baseDir: ["dist"] },
+			files: ["./dist/*.html"],
+			// proxy the Webpack Dev Server endpoint
+			// (which should be serving on http://localhost:3100/)
+			// through BrowserSync
+			// proxy: "http://localhost:8080/",
 		}),
 	],
 	module: {
