@@ -18,7 +18,6 @@
 		<a href="weather.html">Weather</a>
 		<h1 class="heading__primary">findcast</h1>
 		<div class="intro">
-			<h2 class="intro__heading">An app</h2>
 			<div class="intro__content">
 				<p class="intro__description">
 					FindCast is a one-stop-shop personal assistant to help you get
@@ -34,8 +33,8 @@
 			<button class="btn">Get Started &rightrightarrows;</button>
 		</div>
 
-		<div class="products">
-			<div class="product__weather">
+		<section class="products">
+			<div id="product__weather">
 				<form action="#" class="form__group">
 					<label for="#weather-city" class="form__label">
 						Search by city:
@@ -46,15 +45,16 @@
 							id="weather-city"
 						/>
 					</label>
-					<button type="submit" id="weather-btn" class="btn">
-						Go &RightArrowBar;
+					<button type="submit" id="weather-btn" class="form__btn btn">
+						Search &RightArrowBar;
 					</button>
 				</form>
 				<button class="btn" id="weather-coords-btn">
 					By Geolocation &rrarr;
 				</button>
 			</div>
-		</div>
+		</section>
+
 		<div class="lorem">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, at.
 			Molestias dicta expedita similique odit perspiciatis, quas nemo ipsam?
