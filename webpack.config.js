@@ -11,13 +11,13 @@ module.exports = {
 	output: {
 		filename: "[name].js",
 		path: path.resolve(__dirname, "dist", "assets", "scripts"),
-		publicPath: "dist",
 	},
 	devServer: {
-		compress: true,
 		contentBase: path.join(__dirname, "dist"),
-		open: true,
-		watchContentBase: true,
+		watchOptions: {
+			poll: true,
+			ignored: "/node_modules/",
+		},
 		writeToDisk: true,
 	},
 	devtool: "eval-source-map",
