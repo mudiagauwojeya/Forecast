@@ -1,13 +1,10 @@
 //Service Worker
-const cacheName = "sw_v1.10.5";
+const cacheName = "sw_v1.10.6.1";
 const precacheFiles = [
 	"/",
 	"index.html",
-	"weather.html",
-	"./assets/scripts/app.css",
-	"./assets/scripts/weather.css",
-	"./assets/scripts/app.js",
-	"./assets/scripts/weather.js",
+	"./assets/scripts/styles.css",
+	"./assets/scripts/bundle.js",
 ];
 
 self.addEventListener("install", (event) => {
