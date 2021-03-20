@@ -5,9 +5,7 @@ if ("serviceWorker" in navigator) {
 	window.addEventListener("load", () => {
 		//register service worker
 		navigator.serviceWorker
-			.register("/service-worker.js", {
-				scope: "/",
-			})
+			.register("/service-worker.js")
 			.then(() => {
 				return;
 			})
