@@ -1,5 +1,7 @@
 import css from "./css/app.scss";
 
+const getStartedBtn = document.getElementById("getStartedBtn");
+
 // service worker
 if ("serviceWorker" in navigator) {
 	window.addEventListener("load", () => {
