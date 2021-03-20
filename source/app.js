@@ -1,4 +1,5 @@
 import css from "./css/app.scss";
+import Finder from "./components/finder";
 
 // service worker
 if ("serviceWorker" in navigator) {
@@ -42,9 +43,6 @@ class App {
 				}
 			});
 		}
-		this.getStartedBtn.addEventListener("click", (e) => {
-			console.log(e);
-		});
 	}
 }
 

@@ -1,6 +1,6 @@
 class Finder {
 	constructor() {
-		this.lng = coordinates.lng;
+		this.this.lng = coordinates.lng;
 		this.lat = coordinates.lat;
 	}
 
@@ -16,3 +16,5 @@ class Finder {
 		}
 	}
 }
+
+export default Finder;
