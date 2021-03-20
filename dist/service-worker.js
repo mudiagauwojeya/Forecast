@@ -38,5 +38,21 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
 	//service worker intercepting fetch request
 	const request = event.request;
-	event.respondWith(caches.match(request).then((response) => response));
+	event.respondWith(
+		caches.match(request).then(
+			(response) =>
+				response ||
+				fetch(request).then((fetchRes) => {
+					caches
+						.open(cacheName)
+						.then((cache) => {
+							cache.put(request, fetchRes.clone());
+							return fetchRes;
+						})
+						.catch((error) => {
+							console.log(error);
+						});
+				})
+		)
+	);
 });
