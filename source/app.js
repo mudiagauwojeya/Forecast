@@ -1,20 +1,20 @@
 import css from "./css/app.scss";
 
 // service worker
-// if ("serviceWorker" in navigator) {
-// 	window.addEventListener("load", () => {
-// 		//register service worker
-// 		navigator.serviceWorker
-// 			.register("/service-worker.js")
-// 			.then(() => {
-// 				return;
-// 			})
-// 			.catch((err) => {
-// 				const error = { message: err.message };
-// 				console.log(error);
-// 			});
-// 	});
-// }
+if ("serviceWorker" in navigator) {
+	window.addEventListener("load", () => {
+		//register service worker
+		navigator.serviceWorker
+			.register("/service-worker.js")
+			.then(() => {
+				return;
+			})
+			.catch((err) => {
+				const error = { message: err.message };
+				console.log(error);
+			});
+	});
+}
 
 class App {
 	constructor() {
