@@ -20,7 +20,7 @@ module.exports = {
 			host: "localhost",
 			port: 3000,
 			server: { baseDir: ["dist"] },
-			files: ["./dist/*.html", "./dist/service-worker.js"],
+			files: ["./dist/index.html", "./dist/service-worker.js"],
 		}),
 	],
 	module: {
