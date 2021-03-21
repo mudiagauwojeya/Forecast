@@ -1,21 +1,24 @@
 import css from "./css/app.scss";
 import Finder from "./components/finder";
 
-// service worker
-if ("serviceWorker" in navigator) {
-	window.addEventListener("load", () => {
-		//register service worker
-		navigator.serviceWorker
-			.register("/service-worker.js")
-			.then(() => {
-				return;
-			})
-			.catch((err) => {
-				const error = { message: err.message };
-				console.log(error);
-			});
-	});
-}
+window.addEventListener("load", () => {
+	console.log("loaded");
+	// service worker
+	if ("serviceWorker" in navigator) {
+		window.addEventListener("load", () => {
+			//register service worker
+			navigator.serviceWorker
+				.register("/service-worker.js")
+				.then(() => {
+					return;
+				})
+				.catch((err) => {
+					const error = { message: err.message };
+					console.log(error);
+				});
+		});
+	}
+});
 
 class App {
 	constructor() {}
