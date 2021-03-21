@@ -1,19 +1,20 @@
 class Finder {
-	constructor() {
-		this.this.lng = coordinates.lng;
-		this.lat = coordinates.lat;
-	}
-
-	getLocation() {
+	getCoordinates() {
+		let coords;
 		if (navigator.geolocation.getCurrentPosition) {
-			navigator.geolocation.getCurrentPosition((coordinates) => {
-				const coords = {
-					lng: coordinates.longitude,
-					lat: coordinates.latitude,
-				};
-				console.log(coords);
-			});
+			navigator.geolocation.getCurrentPosition(
+				(success) => {
+					coords = {
+						lng: success.coords.longitude,
+						lat: success.coords.latitude,
+					};
+				},
+				(error) => {
+					console.log(error);
+				}
+			);
 		}
+		return coords;
 	}
 }
 

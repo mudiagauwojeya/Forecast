@@ -18,11 +18,11 @@ if ("serviceWorker" in navigator) {
 }
 
 class App {
-	constructor() {
-		this.getStartedBtn = document.getElementById("getStartedBtn");
-	}
+	constructor() {}
 
 	init() {
+		const getStartedBtn = document.getElementById("getStartedBtn");
+
 		const options = {
 			root: null,
 			rootMargin: "0px 0px -200px 0px",
@@ -43,6 +43,14 @@ class App {
 				}
 			});
 		}
+
+		getStartedBtn.addEventListener("click", this.getLocation.bind(this));
+	}
+
+	getLocation() {
+		const finder = new Finder();
+		const coords = finder.getCoordinates();
+		console.log(coords);
 	}
 }
 
