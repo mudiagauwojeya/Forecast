@@ -21,7 +21,7 @@ class App {
 	constructor() {}
 
 	init() {
-		const getStartedBtn = document.getElementById("getStartedBtn");
+		const geolocationBtn = document.getElementById("geolocation-btn");
 
 		const options = {
 			root: null,
@@ -44,7 +44,7 @@ class App {
 			});
 		}
 
-		getStartedBtn.addEventListener(
+		geolocationBtn.addEventListener(
 			"click",
 			this.getUserCoordinates.bind(this)
 		);
