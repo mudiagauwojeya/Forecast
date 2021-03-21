@@ -44,13 +44,28 @@ class App {
 			});
 		}
 
-		getStartedBtn.addEventListener("click", this.getLocation.bind(this));
+		getStartedBtn.addEventListener(
+			"click",
+			this.getUserCoordinates.bind(this)
+		);
 	}
 
-	getLocation() {
-		const finder = new Finder();
-		const coords = finder.getCoordinates();
-		console.log(coords);
+	getUserCoordinates() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(
+				(success) => {
+					const coordinates = {
+						lng: success.coords.longitude,
+						lat: success.coords.latitude,
+					};
+					const finder = new Finder();
+					finder.getUserLocation(coordinates);
+				},
+				(error) => {
+					console.log(error);
+				}
+			);
+		}
 	}
 }
 
