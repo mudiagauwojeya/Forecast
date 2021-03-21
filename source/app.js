@@ -24,6 +24,7 @@ class App {
 	constructor() {}
 
 	init() {
+		const searchByCityBtn = document.getElementById("search-city-btn");
 		const geolocationBtn = document.getElementById("geolocation-btn");
 
 		const options = {
@@ -47,10 +48,21 @@ class App {
 			});
 		}
 
+		searchByCityBtn.addEventListener("click", (event) => {
+			event.preventDefault();
+			this.getCity();
+		});
 		geolocationBtn.addEventListener(
 			"click",
 			this.getUserCoordinates.bind(this)
 		);
+	}
+
+	getCity() {
+		const weatherForm = document.getElementById("weather-form");
+		const cityName = weatherForm.weatherCity.value.trim();
+		console.log(`Searching for ${cityName}`);
+		weatherForm.reset();
 	}
 
 	getUserCoordinates() {
