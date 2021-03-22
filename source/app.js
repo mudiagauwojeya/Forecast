@@ -51,8 +51,7 @@ class App {
 
 		weatherForm.addEventListener("submit", (event) => {
 			event.preventDefault();
-			console.log(event);
-			// this.getCity();
+			this.getCity(event);
 		});
 		geolocationBtn.addEventListener(
 			"click",
@@ -60,16 +59,16 @@ class App {
 		);
 	}
 
-	getCity() {
-		const weatherForm = document.getElementById("weather-form");
-		if (weatherForm.weatherCity.value.trim() === 0) {
+	getCity(event) {
+		console.log(event);
+		const cityName = event.target.weatherCity.value.trim();
+		if (cityName === "" || cityName.length < 2) {
 			alert("Please enter a city name to continue");
 			return;
 		}
 
-		const cityName = weatherForm.weatherCity.value.trim();
 		console.log(`Searching for ${cityName}`);
-		weatherForm.reset();
+		event.target.reset();
 	}
 
 	getUserCoordinates() {
