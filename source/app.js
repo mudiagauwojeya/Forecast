@@ -24,7 +24,8 @@ class App {
 	constructor() {}
 
 	init() {
-		const searchByCityBtn = document.getElementById("search-city-btn");
+		const weatherForm = document.getElementById("weather-form");
+		// const searchByCityBtn = document.getElementById("search-city-btn");
 		const geolocationBtn = document.getElementById("geolocation-btn");
 
 		const options = {
@@ -48,9 +49,10 @@ class App {
 			});
 		}
 
-		searchByCityBtn.addEventListener("click", (event) => {
+		weatherForm.addEventListener("submit", (event) => {
 			event.preventDefault();
-			this.getCity();
+			console.log(event);
+			// this.getCity();
 		});
 		geolocationBtn.addEventListener(
 			"click",
@@ -60,6 +62,11 @@ class App {
 
 	getCity() {
 		const weatherForm = document.getElementById("weather-form");
+		if (weatherForm.weatherCity.value.trim() === 0) {
+			alert("Please enter a city name to continue");
+			return;
+		}
+
 		const cityName = weatherForm.weatherCity.value.trim();
 		console.log(`Searching for ${cityName}`);
 		weatherForm.reset();
