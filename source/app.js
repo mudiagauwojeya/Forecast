@@ -1,5 +1,6 @@
 import css from "./css/app.scss";
 import Finder from "./components/finder";
+import { Weather } from "./components/weather";
 
 window.addEventListener("load", () => {
 	console.log("loaded");

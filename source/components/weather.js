@@ -8,3 +8,5 @@ class Weather {
 		console.log(`Getting weather data for ${this.lng} and ${this.lat}`);
 	}
 }
+
+export { Weather };
