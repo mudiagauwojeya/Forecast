@@ -36,21 +36,47 @@
 
 		<section class="products">
 			<div id="product__weather">
-				<form action="#" class="form__group" id="weather-form">
-					<label for="#weather-city" class="form__label">
+				<form action="#" class="form__group" id="weather">
+					<label for="#weatherCity" class="form__label">
 						Search by city:
 						<input
 							type="text"
 							class="form__input"
 							name="weatherCity"
-							id="city-name"
+							id="weatherCity"
 						/>
 					</label>
-					<button type="submit" id="search-city-btn" class="form__btn btn">
+					<button
+						type="submit"
+						id="weatherSearchBtn"
+						class="form__btn btn"
+					>
 						Search &RightArrowBar;
 					</button>
 				</form>
-				<button class="btn" id="geolocation-btn">
+				<button class="btn" id="weatherBtn">By Geolocation &rrarr;</button>
+			</div>
+
+			<div id="product__location">
+				<form action="#" class="form__group" id="location">
+					<label for="#locationCity" class="form__label">
+						Search by city:
+						<input
+							type="text"
+							class="form__input"
+							name="locationCity"
+							id="locationCity"
+						/>
+					</label>
+					<button
+						type="submit"
+						id="locationSearchBtn"
+						class="form__btn btn"
+					>
+						Search &RightArrowBar;
+					</button>
+				</form>
+				<button class="btn" id="geolocationBtn">
 					By Geolocation &rrarr;
 				</button>
 			</div>
