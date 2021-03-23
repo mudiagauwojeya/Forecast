@@ -75,6 +75,11 @@ class App {
 		});
 	}
 
+	clearValidateStyle() {
+		const userInput = this.weatherForm.weatherCity;
+		userInput.style.backgroundColor = "";
+	}
+
 	getCity() {
 		const cityName = this.weatherForm.weatherCity.value.trim();
 		if (cityName === "" || cityName.length < 2) {
@@ -82,6 +87,7 @@ class App {
 			return;
 		}
 		console.log(`Searching for ${cityName}`);
+		this.clearValidateStyle();
 		this.weatherForm.reset();
 	}
 
