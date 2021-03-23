@@ -21,11 +21,11 @@ window.addEventListener("load", () => {
 });
 
 class App {
-	constructor() {}
+	constructor() {
+		this.weatherForm = document.getElementById("weather-form");
+	}
 
 	init() {
-		const weatherForm = document.getElementById("weather-form");
-		// const searchByCityBtn = document.getElementById("search-city-btn");
 		const geolocationBtn = document.getElementById("geolocation-btn");
 
 		const options = {
@@ -49,9 +49,11 @@ class App {
 			});
 		}
 
-		weatherForm.addEventListener("submit", (event) => {
+		this.validateInput();
+
+		this.weatherForm.addEventListener("submit", (event) => {
 			event.preventDefault();
-			this.getCity(event);
+			this.getCity();
 		});
 		geolocationBtn.addEventListener(
 			"click",
@@ -59,16 +61,28 @@ class App {
 		);
 	}
 
-	getCity(event) {
-		console.log(event);
-		const cityName = event.target.weatherCity.value.trim();
+	validateInput() {
+		const userInput = this.weatherForm.weatherCity;
+		userInput.addEventListener("keyup", (e) => {
+			if (
+				userInput.value.trim() === "" ||
+				userInput.value.trim().length < 2
+			) {
+				userInput.style.backgroundColor = "#fda2a2";
+			} else {
+				userInput.style.backgroundColor = "#94ff94";
+			}
+		});
+	}
+
+	getCity() {
+		const cityName = this.weatherForm.weatherCity.value.trim();
 		if (cityName === "" || cityName.length < 2) {
 			alert("Please enter a city name to continue");
 			return;
 		}
-
 		console.log(`Searching for ${cityName}`);
-		event.target.reset();
+		this.weatherForm.reset();
 	}
 
 	getUserCoordinates() {
