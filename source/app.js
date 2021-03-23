@@ -23,11 +23,11 @@ window.addEventListener("load", () => {
 
 class App {
 	constructor() {
-		this.weatherForm = document.getElementById("weather-form");
+		this.weatherForm = document.getElementById("weather");
 	}
 
 	init() {
-		const geolocationBtn = document.getElementById("geolocation-btn");
+		const weatherLocationBtn = document.getElementById("weatherLocationBtn");
 
 		const options = {
 			root: null,
@@ -56,7 +56,7 @@ class App {
 			event.preventDefault();
 			this.getCity();
 		});
-		geolocationBtn.addEventListener(
+		weatherLocationBtn.addEventListener(
 			"click",
 			this.getUserCoordinates.bind(this)
 		);
