@@ -90,11 +90,15 @@ body {
 	flex: 0 0 1;
 }
 
+:is(#product__weather, #product__location) {
+	width: 50%;
+}
+
 //form
 .form {
 	&__group {
 		font-size: inherit;
-		width: 100%;
+		width: 70%;
 	}
 
 	&__label {

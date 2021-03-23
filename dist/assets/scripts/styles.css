@@ -80,9 +80,13 @@ body {
   flex: 0 0 1;
 }
 
+:is(#product__weather, #product__location) {
+  width: 50%;
+}
+
 .form__group {
   font-size: inherit;
-  width: 100%;
+  width: 70%;
 }
 .form__label {
   color: #020e14;
