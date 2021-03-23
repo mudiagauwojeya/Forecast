@@ -84,6 +84,11 @@ body {
   width: 50%;
 }
 
+:is(#product__location > h2, #product__weather > h2) {
+  color: #020e14;
+  width: 70%;
+}
+
 .form__group {
   font-size: inherit;
   width: 70%;
