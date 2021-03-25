@@ -68,30 +68,30 @@ body {
 }
 
 #products {
-  background-color: #c7d7f7;
+  background-color: transparent;
   border: none;
-  border-radius: 0.5rem;
   color: #dadada;
   margin-top: 5rem;
-  padding: 3rem;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   flex: 0 0 1;
+  justify-content: space-between;
 }
 
 :is(#product__weather, #product__location) {
-  width: 50%;
+  background-color: #c7d7f7;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  width: 40%;
 }
 
 :is(#product__location > h2, #product__weather > h2) {
   color: #020e14;
-  width: 70%;
 }
 
 .form__group {
   font-size: inherit;
-  width: 70%;
 }
 .form__label {
   color: #020e14;
