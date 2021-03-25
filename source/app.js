@@ -25,6 +25,7 @@ class App {
 	}
 
 	init() {
+		const getStartedBtn = document.getElementById("getStartedBtn");
 		const weatherLocationBtn = document.getElementById("weatherLocationBtn");
 
 		const options = {
@@ -47,6 +48,11 @@ class App {
 				}
 			});
 		}
+
+		getStartedBtn.addEventListener("click", (event) => {
+			const section = document.getElementById("products");
+			section.style.display = "block";
+		});
 
 		this.validateInput();
 
