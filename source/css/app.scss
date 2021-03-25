@@ -76,6 +76,10 @@ body {
 //end of intersection observer classes
 
 //products
+section {
+	display: none;
+}
+
 #products {
 	background-color: transparent;
 	border: none;
@@ -85,7 +89,6 @@ body {
 
 	display: flex;
 	flex-flow: row wrap;
-	flex: 0 0 1;
 	justify-content: space-between;
 }
 
@@ -93,7 +96,7 @@ body {
 	background-color: #c7d7f7;
 	border-radius: 0.5rem;
 	padding: 3rem;
-	width: 40%;
+	width: 45%;
 }
 
 :is(#product__location > h2, #product__weather > h2) {
