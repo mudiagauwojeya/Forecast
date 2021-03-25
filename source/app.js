@@ -50,7 +50,7 @@ class App {
 		}
 
 		getStartedBtn.addEventListener("click", (event) => {
-			const section = document.getElementById("products");
+			const section = document.querySelector("section");
 			section.style.display = "block";
 		});
 
