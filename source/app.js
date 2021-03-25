@@ -6,18 +6,16 @@ window.addEventListener("load", () => {
 	console.log("loaded");
 	// service worker
 	if ("serviceWorker" in navigator) {
-		window.addEventListener("load", () => {
-			//register service worker
-			navigator.serviceWorker
-				.register("/service-worker.js")
-				.then(() => {
-					return;
-				})
-				.catch((err) => {
-					const error = { message: err.message };
-					console.log(error);
-				});
-		});
+		//register service worker
+		navigator.serviceWorker
+			.register("/service-worker.js")
+			.then(() => {
+				return;
+			})
+			.catch((err) => {
+				const error = { message: err.message };
+				console.log(error);
+			});
 	}
 });
 
