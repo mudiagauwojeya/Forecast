@@ -97,21 +97,8 @@ class App {
 	}
 
 	getUserCoordinates() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(
-				(success) => {
-					const coordinates = {
-						lng: success.coords.longitude,
-						lat: success.coords.latitude,
-					};
-					const finder = new Finder();
-					finder.getUserLocation(coordinates);
-				},
-				(error) => {
-					console.log(error);
-				}
-			);
-		}
+		const finder = new Finder();
+		finder.getUserLocation();
 	}
 }
 
