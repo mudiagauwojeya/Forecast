@@ -2,7 +2,7 @@ import css from "./css/app.scss";
 import Finder from "./components/finder";
 import { Weather } from "./components/weather";
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
 	console.log("loaded");
 	// service worker
 	if ("serviceWorker" in navigator) {
@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
 			})
 			.catch((err) => {
 				const error = { message: err.message };
-				console.log(error);
+				console.log(error.message);
 			});
 	}
 });
