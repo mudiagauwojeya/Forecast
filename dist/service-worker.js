@@ -1,5 +1,6 @@
 //Service Worker
-const cacheName = "sw_v1.10.6.9";
+let versionNumber = 0;
+const cacheName = `sw_v${versionNumber}`;
 const precacheFiles = [
 	"/",
 	"index.html",
@@ -32,6 +33,7 @@ self.addEventListener("activate", (event) => {
 			});
 		})
 	);
+	versionNumber++;
 	clients.claim();
 });
 
@@ -50,7 +52,7 @@ self.addEventListener("fetch", (event) => {
 							return fetchRes;
 						})
 						.catch((error) => {
-							console.log(error);
+							let fetchError = { message: error.message };
 						});
 				})
 		)
