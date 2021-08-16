@@ -67,10 +67,6 @@ body {
   transform: translateX(0);
 }
 
-section {
-  display: none;
-}
-
 .visible {
   display: block;
 }
