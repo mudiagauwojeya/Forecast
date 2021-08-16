@@ -67,8 +67,8 @@ body {
   transform: translateX(0);
 }
 
-.visible {
-  display: block;
+.hidden {
+  display: none;
 }
 
 #products {
