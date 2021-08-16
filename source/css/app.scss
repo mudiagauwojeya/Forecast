@@ -92,6 +92,7 @@ body {
 	justify-content: space-between;
 }
 
+//BUG: Adjust the width to avoid layout shift
 :is(#product__weather, #product__location) {
 	background-color: #c7d7f7;
 	border-radius: 0.5rem;
