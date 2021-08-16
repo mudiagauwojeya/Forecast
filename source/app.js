@@ -34,12 +34,7 @@ class App {
 			threshold: 0.05,
 		};
 
-		let observer = new IntersectionObserver(fadeIn, options);
-		document.querySelectorAll(".lorem").forEach((lorem) => {
-			observer.observe(lorem);
-		});
-
-		function fadeIn(elements) {
+		const fadeIn = (elements) => {
 			elements.forEach((element) => {
 				if (element.isIntersecting) {
 					element.target.classList.add("active");
@@ -47,7 +42,10 @@ class App {
 					element.target.classList.remove("active");
 				}
 			});
-		}
+		};
+
+		let observer = new IntersectionObserver(fadeIn, options);
+		observer.observe(document.querySelectorAll(".lorem"));
 
 		getStartedBtn.addEventListener("click", (event) => {
 			const section = document.querySelector("section");
