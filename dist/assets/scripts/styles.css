@@ -100,10 +100,10 @@ body {
   color: #020e14;
 }
 .form__input {
-  background-color: #f8f8f8;
+  background-color: #ececec;
   border: none;
   border-radius: 0.6rem;
-  font-size: inherit;
+  font-size: 1.4rem;
   letter-spacing: inherit;
   padding: 1.2rem 1rem;
   margin: 1.5rem 0 2rem;
