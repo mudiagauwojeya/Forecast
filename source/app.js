@@ -2,22 +2,22 @@ import css from "./css/app.scss";
 import Finder from "./components/finder";
 import { Weather } from "./components/weather";
 
-window.addEventListener("DOMContentLoaded", () => {
-	console.log("loaded");
-	// service worker
-	if ("serviceWorker" in navigator) {
-		//register service worker
-		navigator.serviceWorker
-			.register("/service-worker.js")
-			.then(() => {
-				return;
-			})
-			.catch((err) => {
-				const error = { message: err.message };
-				console.log(error.message);
-			});
-	}
-});
+// window.addEventListener("DOMContentLoaded", () => {
+// 	console.log("loaded");
+// 	// service worker
+// 	if ("serviceWorker" in navigator) {
+// 		//register service worker
+// 		navigator.serviceWorker
+// 			.register("/service-worker.js")
+// 			.then(() => {
+// 				return;
+// 			})
+// 			.catch((err) => {
+// 				const error = { message: err.message };
+// 				console.log(error.message);
+// 			});
+// 	}
+// });
 
 class App {
 	constructor() {
@@ -34,22 +34,22 @@ class App {
 			threshold: 0.05,
 		};
 
-		const fadeIn = (elements) => {
-			elements.forEach((element) => {
-				if (element.isIntersecting) {
-					element.target.classList.add("active");
-				} else {
-					element.target.classList.remove("active");
-				}
-			});
-		};
+		// const fadeIn = (elements) => {
+		// 	elements.forEach((element) => {
+		// 		if (element.isIntersecting) {
+		// 			element.target.classList.add("active");
+		// 		} else {
+		// 			element.target.classList.remove("active");
+		// 		}
+		// 	});
+		// };
 
-		let observer = new IntersectionObserver(fadeIn, options);
-		observer.observe(document.querySelectorAll(".lorem"));
+		// let observer = new IntersectionObserver(fadeIn, options);
+		// observer.observe(document.querySelectorAll(".lorem"));
 
 		getStartedBtn.addEventListener("click", (event) => {
 			const section = document.querySelector("section");
-			section.style.display = "block";
+			section.classList.toggle("hidden");
 		});
 
 		this.validateInput();
