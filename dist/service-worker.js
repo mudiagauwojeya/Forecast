@@ -10,6 +10,7 @@ const precacheFiles = [
 
 self.addEventListener("install", (event) => {
 	//install service-worker
+	versionNumber++;
 	event.waitUntil(
 		caches
 			.open(cacheName)
@@ -33,7 +34,7 @@ self.addEventListener("activate", (event) => {
 			});
 		})
 	);
-	versionNumber++;
+
 	clients.claim();
 });
 
@@ -52,7 +53,7 @@ self.addEventListener("fetch", (event) => {
 							return fetchRes;
 						})
 						.catch((error) => {
-							let fetchError = { message: error.message };
+							console.log(error);
 						});
 				})
 		)
