@@ -51,6 +51,7 @@ class App {
 		getStartedBtn.addEventListener("click", (event) => {
 			const section = document.querySelector("section");
 			section.classList.toggle("hidden");
+			this.weatherForm.weatherCity.focus();
 		});
 
 		this.validateInput();
