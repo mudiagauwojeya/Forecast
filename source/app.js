@@ -28,11 +28,11 @@ class App {
 		const getStartedBtn = document.getElementById("getStartedBtn");
 		const weatherLocationBtn = document.getElementById("weatherLocationBtn");
 
-		const options = {
-			root: null,
-			rootMargin: "0px 0px -200px 0px",
-			threshold: 0.05,
-		};
+		// const options = {
+		// 	root: null,
+		// 	rootMargin: "0px 0px -200px 0px",
+		// 	threshold: 0.05,
+		// };
 
 		// const fadeIn = (elements) => {
 		// 	elements.forEach((element) => {
@@ -47,7 +47,6 @@ class App {
 		// let observer = new IntersectionObserver(fadeIn, options);
 		// observer.observe(document.querySelectorAll(".lorem"));
 
-		//TODO: When this button is clicked, scroll the form into view and focus on the input field
 		getStartedBtn.addEventListener("click", () => {
 			const section = document.querySelector("section");
 			section.classList.remove("hidden");
