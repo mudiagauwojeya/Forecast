@@ -48,9 +48,10 @@ class App {
 		// observer.observe(document.querySelectorAll(".lorem"));
 
 		//TODO: When this button is clicked, scroll the form into view and focus on the input field
-		getStartedBtn.addEventListener("click", (event) => {
+		getStartedBtn.addEventListener("click", () => {
 			const section = document.querySelector("section");
-			section.classList.toggle("hidden");
+			section.classList.remove("hidden");
+			section.scrollIntoView(true, { behavior: "smooth" });
 			this.weatherForm.weatherCity.focus();
 		});
 
