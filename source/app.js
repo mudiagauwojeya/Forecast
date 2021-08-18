@@ -51,7 +51,6 @@ class App {
 			const section = document.querySelector("section");
 			section.classList.remove("hidden");
 			section.scrollIntoView(true, { behavior: "smooth" });
-			this.weatherForm.weatherCity.focus();
 		});
 
 		this.validateInput();
