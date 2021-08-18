@@ -51,6 +51,7 @@ class App {
 			const section = document.querySelector("section");
 			section.classList.remove("hidden");
 			section.scrollIntoView(true, { behavior: "smooth" });
+			//TODO: focus the input field only after the elements are scrolled into view
 		});
 
 		this.validateInput();
